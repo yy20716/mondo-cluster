@@ -1,0 +1,11 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select ?super ?sub (count(?mid) as ?distance) { 
+  ?super rdfs:subClassOf* ?mid .
+  ?mid rdfs:subClassOf+ ?sub .
+
+  Filter ( contains(str(?sub),'MONDO'))
+  Filter ( contains(str(?super),'MONDO'))
+}
+group by ?super ?sub 
+order by ?super ?sub
