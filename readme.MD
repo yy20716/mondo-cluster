@@ -1,9 +1,8 @@
 # Mondo-Cluster
+This repo contains source codes of the mini project proceeded under the first machine-learning workshop in LBNL (BSA-CSA Hackathon)
 
 ## Getting Started
 ~~~~
-target/owltools hp.obo --no-reasoner --merge-support-ontologies -o hp.owl
-
 # get all required files
 wget http://purl.obolibrary.org/obo/go.owl
 wget http://purl.obolibrary.org/obo/mondo/pre/mondo.owl
@@ -41,3 +40,8 @@ robot query --input go.owl --query query/go_label.sparql go_label.csv
 
 # the above script generates mapped_go_labels.txt, which contains the list of go classes with their labels and cluster ids.
 ~~~~
+
+## Contributors
+- [HyeongSik Kim](https://github.com/yy20716)
+- [Ben Booth](https://github.com/benwbooth)
+- [Chris Mungall](https://github.com/cmungall)
